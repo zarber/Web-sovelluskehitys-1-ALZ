@@ -1,0 +1,11 @@
+node_modules/
+Quiz/
+Sample-solutions/
+lecture/
+demo/
+peer-assessment.md
+temp.md
+
+# dotenv environment variables file
+.env
+.env.test

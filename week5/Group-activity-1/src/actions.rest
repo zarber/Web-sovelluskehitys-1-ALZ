@@ -1,0 +1,68 @@
+# My Variables
+@contentType = application/json
+@baseurl = http://localhost:4000/api
+
+### GET Request
+GET {{baseurl}}/workouts
+Content-Type: {{contentType}
+
+### GET Request
+GET {{baseurl}}/workouts/63ec911f814728cb6f6b5bad
+Content-Type: {{contentType}
+
+### GET Request (does not exist)
+GET {{baseurl}}/workouts/638991cb72ef735735399e03
+Content-Type: {{contentType}
+
+### DELET Request
+DELETE {{baseurl}}/workouts/63ec9110814728cb6f6b5ba9
+Content-Type: application/json
+
+### DELET Request  (does not exist)
+DELETE {{baseurl}}/workouts/638991cb72ef735735399e03
+Content-Type: application/json
+
+### unknown end point
+GET {{baseurl}}/workoutsss/15
+Content-Type: {{contentType}
+
+### POST Request
+POST {{baseurl}}/workouts/
+Content-Type: application/json
+
+{
+    "title":"Workouts 1",
+    "reps":45,
+    "load":15
+}
+
+
+###
+POST {{baseurl}}/workouts/ HTTP/1.1
+content-type: application/json
+
+{
+    "title":"workout 10",
+    "reps":54,
+    "load":64
+}
+
+###
+POST {{baseurl}}/workouts/ HTTP/1.1
+content-type: application/json
+
+{
+    "title":"workout 9",
+    "reps":554,
+    "load":544
+}
+
+
+### PUT  Request
+PATCH {{baseurl}}/workouts/63ec91dd814728cb6f6b5bbb
+Content-Type: application/json
+
+{
+    "reps":34,
+    "load":20
+}
