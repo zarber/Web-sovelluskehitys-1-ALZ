@@ -1,0 +1,20 @@
+# My Variables
+@contentType = application/json
+# @baseurl = https://backend-v2.onrender.com/api
+@baseurl = http://localhost:5000/api/v1
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksInVzZXJuYW1lIjoibWlyamEiLCJpYXQiOjE2NzY4MDkxMDcsImV4cCI6MTY3Njg5NTUwN30.C9Oux8GuAiE-1Ewd5LyHusjAxqufvFBVo6Pr9GYOHls
+
+
+### login
+POST  {{baseurl}}/login
+Content-Type: {{contentType}}
+
+{
+    "username": "mirja",
+    "password": "45RFgh##@$"
+}
+
+### dashboard
+GET  {{baseurl}}/dashboard
+Content-Type: {{contentType}}
+Authorization: Bearer {{token}}

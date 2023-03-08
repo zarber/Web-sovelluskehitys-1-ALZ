@@ -1,0 +1,63 @@
+# My Variables
+@contentType = application/json
+# @baseurl = https://backend-v2.onrender.com/api
+@baseurl = http://localhost:5000/api/v1
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2YyMTY0OTU3NDYyMjI1ODg1ZGU2MTgiLCJuYW1lIjoiTWF0dGkiLCJpYXQiOjE2NzY4MTAxMzksImV4cCI6MTY3Njg5NjUzOX0.U0TI9lyIJaRZaBVxyyHn8Idqt1DTWtESGuBrG9dThPs
+
+### auth jobs
+POST {{baseurl}}/auth/register
+Content-Type: {{contentType}}
+
+{
+    "name":"Matti",
+    "email":"matti3@matti.com",
+    "password":"B55##Rf11"
+}
+
+### auth jobs
+POST {{baseurl}}/auth/login
+Content-Type: {{contentType}}
+
+
+{
+    "email":"matti@matti.com",
+    "password":"B55##Rf11"
+}
+
+
+### post
+POST {{baseurl}}/jobs
+Content-Type: {{contentType}}
+Authorization: Bearer {{token}}
+
+{
+  "company": "google",
+  "position": "front-back-end developer"
+}
+
+###
+GET {{baseurl}}/jobs
+Content-Type: {{contentType}}
+Authorization: Bearer {{token}}
+
+###
+GET {{baseurl}}/jobs/63f2194400991e36a4eabe9a
+Content-Type: {{contentType}}
+Authorization: Bearer {{token}}
+
+###
+PATCH {{baseurl}}/jobs/63f2194400991e36a4eabe9a
+Content-Type: {{contentType}}
+Authorization: Bearer {{token}}
+
+{
+  "company": "random",
+  "position": "intern"
+}
+
+###
+DELETE {{baseurl}}/jobs/63f219bb00991e36a4eabe9c
+Content-Type: {{contentType}}
+Authorization: Bearer {{token}}
+
+

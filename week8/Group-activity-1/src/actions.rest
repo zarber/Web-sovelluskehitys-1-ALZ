@@ -1,0 +1,50 @@
+# My Variables
+@contentType = application/json
+# @baseurl = https://backend-v2.onrender.com/api
+@baseurl = http://localhost:5000/api/v1
+@token = 
+
+
+###
+POST {{baseurl}}/products
+Content-Type: {{contentType}}
+Authorization: bearer {{token}}
+
+{
+    "name":"task4",
+    "completed":false
+}
+
+###
+GET {{baseurl}}/products
+Content-Type: {{contentType}}
+Authorization: bearer {{token}}
+
+###
+GET {{baseurl}}/products/63f20ccfa19cea27ac72199a
+Content-Type: {{contentType}}
+Authorization: bearer {{token}}
+
+
+
+###
+PATCH {{baseurl}}/products/63f20c1ba19cea27ac721995
+Content-Type: {{contentType}}
+Authorization: bearer {{token}}
+
+{
+    "completed":true
+}
+
+###
+DELETE {{baseurl}}/products/63f20ccfa19cea27ac72199a
+Content-Type: {{contentType}}
+Authorization: bearer {{token}}
+
+
+###
+GET {{baseurl}}/static
+Content-Type: {{contentType}}
+Authorization: bearer {{token}}
+
+
